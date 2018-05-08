@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant value="utf-8" name="struts.i18n.encoding"/>
+	<constant name="struts.devMode" value="true"></constant>
+	<package name="vote" extends="struts-default,json-default">
+		<action name="admin_*" class="com.gd.actions.adminAction" method="{1}">
+			<result name="login">/index.jsp</result>
+			<result name="register">/login.jsp</result>
+			<result name="error">/error.jsp</result>
+			<result name="json1" type="json">
+				<param name="root">jsonadmin</param>
+			</result>
+			<result name="get">/adminget.jsp</result>
+			<result name="update">/login.jsp</result>
+		</action>
+	</package>
+</struts>    
